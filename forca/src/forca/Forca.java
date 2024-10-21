@@ -1,4 +1,4 @@
-package forca;
+package forca
 
 import java.util.Random;
 import java.util.Scanner;
@@ -7,12 +7,10 @@ public class Forca {
 
 	public static void main(String[] args) {
 		
-		//String[] palavras = new String[]{"casa","teste","hora","choque"};
-		//Random sorteiapalavra = new Random();
-		//int i = sorteiapalavra.nextInt(4);
-		System.out.println("Digite a palavra que vc deseja");
-		Scanner entrada = new Scanner(System.in);
-		String palavrasorteada = entrada.nextLine();//palavras[i];
+		String[] palavras = new String[]{"casa","teste","hora","choque"};
+		Random sorteiapalavra = new Random();
+		int i = sorteiapalavra.nextInt(4);
+		String palavrasorteada =palavras[i];
 		char[] palavraformada = new char[palavrasorteada.length()];
 		String[] desenhoforca = new String[] {" O "," | ", " V ", " | "," M "};
 
@@ -24,7 +22,7 @@ public class Forca {
 	
 		int cont=0;
 		
-		entrada = new Scanner(System.in);
+		Scanner entrada = new Scanner(System.in);
 		String letrapalavra = null;
 		
 		System.out.print("Jogo da forca a palavra sorteada tem "+palavrasorteada.length()+" letras\n");
@@ -53,13 +51,13 @@ public class Forca {
 							
 								if(desenhoforca[y]==" O ") {	
 							
-									System.out.print("FORCA!!!!Que Pena você perdeu!!! \nA palavra escolhida pelo sistema foi '"+palavrasorteada+"' tente novamente!!!");
+									System.out.print("FORCA!!!!Que Pena voce perdeu!!! \nA palavra escolhida pelo sistema foi '"+palavrasorteada+"' tente novamente!!!");
 						
 								}else {
 							
 									System.out.print(desenhoforca[y]);
 							
-									System.out.print("\nFORCA!!!!Que Pena você perdeu!!! \nA palavra escolhida pelo sistema foi '"+palavrasorteada+"' tente novamente!!!");
+									System.out.print("\nFORCA!!!!Que Pena voce perdeu!!! \nA palavra escolhida pelo sistema foi '"+palavrasorteada+"' tente novamente!!!");
 							
 								}
 						
@@ -117,13 +115,13 @@ public class Forca {
 			}else if(letrapalavra.equals(palavrasorteada)){
 				
 			System.out.println();	
-			System.out.print("Parabens!!! Vc acertou. A palavra é '"+palavrasorteada+"'");
+			System.out.print("Parabens!!! Vc acertou. A palavra e '"+palavrasorteada+"'");
 			
 			System.exit(0);
 			
 			}else{
 				
-			System.out.print("FORCA!!!!Que Pena você perdeu!!! \nA palavra escolhida pelo sistema foi '"+palavrasorteada+"' tente novamente!!!");
+			System.out.print("FORCA!!!!Que Pena voce perdeu!!! \nA palavra escolhida pelo sistema foi '"+palavrasorteada+"' tente novamente!!!");
 
 			System.exit(0);
 				
@@ -136,7 +134,7 @@ public class Forca {
 		
 		if(!palavraformada.toString().contains("_") || !palavraformada.toString().contains(letrapalavra)) {
 			System.out.println();	
-			System.out.print("Parabens!!! Vc acertou. A palavra é '"+palavrasorteada+"'");
+			System.out.print("Parabens!!! Vc acertou. A palavra e '"+palavrasorteada+"'");
 			
 		}
 
